@@ -1,0 +1,55 @@
+<div class="col-md-12">
+  <br>
+  <div class="prof-list-item clearfix" id="checkBoxForm">
+    <div class="container">
+      <div class="reg-details">Student Registration Details </div><br>
+   <div class="row">
+     <div class="col-md-4 tb-head">First Name : </div>
+     <div class="col-md-6">{{ student.firstName}}</div>
+   </div>
+    <div class="row">
+      <div class="col-md-4 tb-head">Last Name : </div>
+      <div class="col-md-6">{{ student.lastName}}</div>
+    </div>
+      <div class="row">
+        <div class="col-md-4 tb-head">Gender :</div>
+        <div class="col-md-6">{{ student.gender}}</div>
+      </div>
+
+    <div class="row">
+      <div class="col-md-4 tb-head">Email Address :</div>
+      <div class="col-md-6">{{ student.email}}</div>
+    </div>
+      <div class="row">
+        <div class="col-md-4 tb-head">Registered on :</div>
+
+      </div>
+
+      <form>
+          <br>
+
+        <div align="center " class="course-reg-details">Registered Courses</div>
+        <div><a class="nav-link" routerLink="#">Register for Courses</a></div>
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Course title</th>
+            <th>Number Of Credits</th>
+            <th>Course Description</th>
+            <th>Course Instructor</th>
+          </tr>
+          </thead>
+          <tbody>
+        <!--  <tr *ngFor="let course of student.courses" >
+            <td>{{ course.title}}</td>
+            <td>{{ course.credits}}</td>
+            <td>{{ course.description}}</td>
+          </tr>-->
+          </tbody>
+        </table>
+        <hr>
+      </form>
+    </div>
+  </div>
+</div><br><br>
+

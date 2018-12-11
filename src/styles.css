@@ -1,0 +1,9 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "app/app.component.css";
+@import "app/app-styles.css";
+
+
+.cursor-pointer{
+  cursor: pointer;
+  color: #007bff;
+}

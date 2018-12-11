@@ -1,0 +1,58 @@
+
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Course Management Portal</a>
+
+  <input aria-label="Search" class="form-control form-control-dark w-100" placeholder="Search" type="text">
+
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul>
+</nav>
+<div class="container">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar navbar-nav position-fixed">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a  routerLinkActive="active current" class="nav-link" href="#"> CMP Overview </a>
+          </li>
+          <li class="nav-item">
+
+            <a routerLinkActive="active current"  class="nav-link" routerLink="/students"> Manage Students</a>
+          </li>
+          <li  class="nav-item">
+            <a routerLinkActive="active current"  class="nav-link" routerLink="/courses"> Manage Courses</a>
+          </li>
+          <li class="nav-item">
+            <a  routerLinkActive="active current" class="nav-link" routerLink="/instructors"> Manage Instructors</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <!--  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h6 class="h3">Admin Dashboard</h6>
+      </div>-->
+
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h3>Dashboard</h3>
+       <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button class="btn btn-sm btn-outline-secondary">Share</button>
+            <button class="btn btn-sm btn-outline-secondary">Export</button>
+          </div>
+          <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            This week
+          </button>
+        </div>
+      </div>
+        <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+
+
+

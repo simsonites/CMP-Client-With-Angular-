@@ -1,0 +1,26 @@
+<div class="col-md-12">
+  <h5> Instructor Details</h5><br>
+
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Email</th>
+      <th colspan="3">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let instructor of instructors">
+      <td class="hidden">{{instructor.id}}</td>
+      <td>{{instructor.firstName}}</td>
+      <td>{{instructor.lastName}}</td>
+      <td>{{instructor.email}}</td>
+      <td><a class="nav-link" routerLink="/students">view details</a></td>
+      <td><a href="#"><i class="glyphicon glyphicon-edit"></i></a></td>
+      <td><a href="#"><i class="svg-icon"></i></a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

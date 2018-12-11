@@ -1,0 +1,78 @@
+<div class="col-md-12">
+
+
+  <form>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="title">Title</label>
+        <input class="form-control" id="title" type="text">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="instructor">Add Instructor(You can add instructor later)</label>
+        <select class="form-control" id="instructor">
+          <option selected>select instructor...</option>
+          <option>...</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-2">
+        <label for="credits">Credits</label>
+        <input class="form-control" id="credits" type="number">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-8">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" type="text">
+      </textarea>
+      </div><br><br>
+ <div class="col-md-4">
+   <button class="btn btn-primary" type="submit">Sign in</button>
+ </div>
+    </div>
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h5> List Of Course</h5><br>
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th class="hidden">Id</th>
+    <th>Title</th>
+    <th>Credits</th>
+    <th>Description</th>
+    <th>Instructor</th>
+    <th colspan="3">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let course of courses">
+    <td class="hidden">{{course.id}}</td>
+    <td>{{course.title}}</td>
+    <td>{{course.credits}}</td>
+    <td>{{course.description}}</td>
+    <td>{{course.instructor}}</td>
+    <td><a class="nav-link" routerLink="/students">view details</a></td>
+    <td><a href="#"><i class="glyphicon glyphicon-edit"></i></a></td>
+  </tr>
+  </tbody>
+</table>
+</div>

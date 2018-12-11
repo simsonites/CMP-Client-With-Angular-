@@ -1,5 +1,6 @@
 import {Injectable, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {Course} from "../course/course.module";
 
 
 
@@ -18,5 +19,7 @@ export class Student {
   public lastName: String;
   public gender: String;
   public email: String;
-  //public courses: Course;
+  public createdAt :string;
+  public updatedAt: string;
+  public courses : Course[];
 }

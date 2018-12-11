@@ -23,8 +23,8 @@ export class StudentService {
    deleteStudent(student: Student) {
     return this.http.delete(this.studentUrl + '/' + student.id);
   }
-   getStudent(studentId){
-    return this.http.get<Student>(this.studentUrl + '/' +studentId);
+   getStudent(id: number){
+    return this.http.get<Student>(this.studentUrl + '/' +id);
   }
 
   updateStudent(student){

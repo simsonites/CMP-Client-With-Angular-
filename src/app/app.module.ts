@@ -15,7 +15,6 @@ import {FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NavBarComponent } from './navigation/nav-bar/nav-bar.component';
 import {StudentDetailsComponent} from './student/details/student-details.component';
 import {AddStudentComponent} from "./student/add-student/add-student.component";
-import {EditStudentComponent} from "./student/edit-student/edit-student.component";
 
 
 @NgModule({
@@ -27,7 +26,6 @@ import {EditStudentComponent} from "./student/edit-student/edit-student.componen
     SideNavMenuComponent,
     NavBarComponent,
     AddStudentComponent,
-    EditStudentComponent,
     StudentDetailsComponent,
 
   ],

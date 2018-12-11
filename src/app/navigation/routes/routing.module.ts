@@ -6,7 +6,7 @@ import {NgModule} from '@angular/core';
 import {InstructorComponent} from '../../instructor/instructor.component';
 import {StudentDetailsComponent} from '../../student/details/student-details.component';
 import {AddStudentComponent} from "../../student/add-student/add-student.component";
-import {EditStudentComponent} from "../../student/edit-student/edit-student.component";
+
 
 
 const routes: Routes = [

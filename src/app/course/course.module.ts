@@ -15,7 +15,7 @@ export class CourseModule { }
 export class Course {
   public id: number;
   public title: String;
-  public credits: number;
+  public numberOfCredits: number;
   public description: String;
   public students: Student;
   public instructor: Instructor;

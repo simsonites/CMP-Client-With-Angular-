@@ -1,7 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {StudentService} from './student.service';
 import {Route, Router} from "@angular/router";
 import {Student} from "./student.module";
+import {Subscription} from "rxjs";
 
 
 
@@ -10,12 +11,11 @@ import {Student} from "./student.module";
   templateUrl: './student.component.html',
   styleUrls: ['./student.component.css']
 })
-export class StudentComponent implements OnInit {
+export class StudentComponent implements OnInit{
 // @Input() student: Student;
- student: Student;
-
-  public students: Array<any>;
-  public pages: Array<number>;
+  student: Student;
+  public students: any[];
+  public pages: number[];
   private page = 0;
 
   constructor(
@@ -26,7 +26,7 @@ export class StudentComponent implements OnInit {
  this.getStudents();
   }
 
-   setPages(i, event: any) {
+  setPages(i, event: any) {
     event.preventDefault();
     this.page = i;
     this.getStudents();
@@ -55,15 +55,11 @@ export class StudentComponent implements OnInit {
 viewStudent(studentId){
     this.route.navigate(['/students/' +studentId]);
 }
-/*editStudent(studentId){
-    this.route.navigate(['/students/edit/' +studentId]);
-}*/
 
 editStudent(student){
   this.studentService.setter(student);
   this.route.navigate(['/students/edit']);
 }
-
   createStudent(){
   let student = new Student();
     this.studentService.setter(student);

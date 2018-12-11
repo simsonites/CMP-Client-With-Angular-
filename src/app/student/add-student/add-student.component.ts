@@ -22,11 +22,14 @@ export class AddStudentComponent implements OnInit {
   createStudent(){
      if(this.student.id == undefined){
        this.studentService.createStudent(this.student)
-         .subscribe(data =>{console.log(data);
+         .subscribe(data =>{
+          this.route.navigate(['/students']);
          });
      }else{
        this.studentService.updateStudent(this.student)
-         .subscribe(data =>{console.log(data);});
+         .subscribe(data =>{
+           this.route.navigate(['/students']);
+         });
      }
   };
 

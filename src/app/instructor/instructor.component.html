@@ -1,25 +1,29 @@
 <div class="col-md-12">
-  <h5> Instructor Details</h5><br>
+  <h5> List Of Current Instructor</h5><br>
 
   <table class="table table-bordered">
     <thead>
     <tr>
+      <th> <input id='checkall' type='checkbox'>  </th>
       <th class="hidden">Id</th>
       <th>FirstName</th>
       <th>LastName</th>
-      <th>Email</th>
-      <th colspan="3">Action</th>
+      <th class="center" colspan="2">Contacts</th>
+      <th class="center" colspan="3" >Operations</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let instructor of instructors">
+      <td> <input id='check' type='checkbox'></td>
       <td class="hidden">{{instructor.id}}</td>
       <td>{{instructor.firstName}}</td>
       <td>{{instructor.lastName}}</td>
       <td>{{instructor.email}}</td>
-      <td><a class="nav-link" routerLink="/students">view details</a></td>
-      <td><a href="#"><i class="glyphicon glyphicon-edit"></i></a></td>
-      <td><a href="#"><i class="svg-icon"></i></a></td>
+      <td>{{instructor.mobileContact}}</td>
+      <td><a class="nav-link" routerLink="#">Assigned Courses</a></td>
+      <td><button class="btn btn-sm btn-info"> <i class="fa fa-edit"></i></button></td>
+      <td><button class="btn btn-sm btn-danger" >
+        <i class="fa fa-trash"></i></button></td>
     </tr>
     </tbody>
   </table>

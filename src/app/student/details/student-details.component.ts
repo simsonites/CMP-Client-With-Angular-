@@ -2,7 +2,7 @@ import {Component, Injectable, OnInit} from '@angular/core';
 import {Student} from '../student.module';
 import {StudentService} from '../student.service';
 import {ActivatedRoute} from '@angular/router';
-import {Course} from "../../course/course.module";
+
 
 
 @Component({
@@ -12,15 +12,17 @@ import {Course} from "../../course/course.module";
 })
 
 export class StudentDetailsComponent implements OnInit {
-  student: Student;
+  student: Student = new Student();
 
-  constructor(private _route: ActivatedRoute,
+  constructor(private route: ActivatedRoute,
               private _studentService: StudentService) {}
 
   ngOnInit() {
-    const id = +this._route.snapshot.params['id'];
-   // this.student = this._studentService.getStudent(id);
-
+    const id = +this.route.snapshot.params['id'];
+   this._studentService.getStudent(id)
+     .subscribe(data =>{
+     this.student = data;
+   })
   }
 }
 

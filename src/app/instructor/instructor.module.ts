@@ -16,6 +16,8 @@ export class Instructor {
   public firstName: String;
   public lastName: String;
   public email: String;
+  public mobileContact: String;
+  public title: String;
   public courses: Course;
 
 }

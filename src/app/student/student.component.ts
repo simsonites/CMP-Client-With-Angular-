@@ -12,11 +12,13 @@ import {Subscription} from "rxjs";
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit{
+  title = 'CMP | Students';
 // @Input() student: Student;
   student: Student;
   public students: any[];
   public pages: number[];
   private page = 0;
+
 
   constructor(
     private studentService : StudentService,

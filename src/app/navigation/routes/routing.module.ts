@@ -6,12 +6,12 @@ import {NgModule} from '@angular/core';
 import {InstructorComponent} from '../../instructor/instructor.component';
 import {StudentDetailsComponent} from '../../student/details/student-details.component';
 import {AddStudentComponent} from "../../student/add-student/add-student.component";
+import {HomeComponent} from "../../home/home.component";
 
 
 
 const routes: Routes = [
-
-
+  { path: '', component: HomeComponent},
   { path: 'students/new', component: AddStudentComponent},
   { path: 'students/edit', component: AddStudentComponent },
   { path: 'students/:id', component: StudentDetailsComponent },

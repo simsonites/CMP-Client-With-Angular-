@@ -11,10 +11,11 @@
          placeholder="enter student name to search..."/>
 </div><br>
   <div class="row">
+
    <table class="table table-bordered">
     <thead>
     <tr>
-      <th> <input id='checkall' type='checkbox'>  </th>
+      <th> <input  id="checkAll"  name="checkAll" type="checkbox" >  </th>
        <th>Id</th>
       <th>First Name</th>
       <th>Last Name</th>
@@ -25,7 +26,14 @@
     </thead>
     <tbody>
     <tr *ngFor="let student of students">
-      <td> <input id='check' type='checkbox'></td>
+
+      <td> <form #select>
+        <input [(ngModel)]="student.selectedStudentIds" id="checkSelect"
+                  name="checkSelect" type="checkbox" >
+        {{ select.value | json}}
+      </form>
+      </td>
+
       <td>{{student.id}}</td>
       <td>{{student.firstName}}</td>
       <td>{{student.lastName}}</td>
@@ -40,6 +48,7 @@
     </tr>
     </tbody>
   </table>
+
  <hr>
         <nav class="border-info">
         <ul class="nav nav-pills pagination">

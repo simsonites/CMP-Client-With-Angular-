@@ -1,6 +1,34 @@
-<header class="demo-header mdl-layout__header mdl-color-text--blue-grey-50">
-  <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title">Course Management Portal</span>
-    <div class="mdl-layout-spacer"></div>
-  </div>
-</header>
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand" routerLink="/">iCMP</a>
+    <button aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarsExampleDefault" data-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="#">Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink="#">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink="#">Instructors</a>
+        </li>
+      </ul>
+   <div class="pull-right">
+      <ul>
+        <li class="nav-item dropdown " ngbDropdown>
+          <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+             data-toggle="dropdown" ngbDropdownToggle
+             routerLink="#">Current Username </a>
+          <div aria-labelledby="dropdown01" class="dropdown-menu " ngbDropdownMenu>
+            <a class="dropdown-item" routerLink="#">Action</a>
+            <a class="dropdown-item" routerLink="#">Another action</a>
+            <a class="dropdown-item" routerLink="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+   </div>
+    </div>
+  </nav>

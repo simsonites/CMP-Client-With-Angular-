@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
 import { CourseComponent } from './course/course.component';
 import { InstructorComponent } from './instructor/instructor.component';
-import { SideNavMenuComponent } from './navigation/side-nav-menu/side-nav-menu.component';
 import {StudentService} from './student/student.service';
 import { HttpClientModule } from '@angular/common/http';
 import {RoutingModule} from './navigation/routes/routing.module';
@@ -15,6 +14,9 @@ import {FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NavBarComponent } from './navigation/nav-bar/nav-bar.component';
 import {StudentDetailsComponent} from './student/details/student-details.component';
 import {AddStudentComponent} from "./student/add-student/add-student.component";
+import { HomeComponent } from './home/home.component';
+import { SideNavBarComponent } from './navigation/side-nav-bar/side-nav-bar.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -23,10 +25,11 @@ import {AddStudentComponent} from "./student/add-student/add-student.component";
     StudentComponent,
     CourseComponent,
     InstructorComponent,
-    SideNavMenuComponent,
     NavBarComponent,
     AddStudentComponent,
     StudentDetailsComponent,
+    HomeComponent,
+    SideNavBarComponent,
 
   ],
   imports: [
@@ -34,10 +37,10 @@ import {AddStudentComponent} from "./student/add-student/add-student.component";
     RoutingModule,
     HttpClientModule,
     FormsModule,
+    NgbModule.forRoot(),
     ReactiveFormsModule
   ],
-  providers: [
-    StudentService,
+  providers: [  StudentService,
     CourseService,
     InstructorService],
 

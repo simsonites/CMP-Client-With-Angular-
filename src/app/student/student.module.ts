@@ -22,4 +22,5 @@ export class Student {
   public createdAt :string;
   public updatedAt: string;
   public courses : Course[];
+  public selectedStudentIds: string[];
 }
